@@ -26,9 +26,9 @@ section {
 
 .redThread {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 500%;
+  top: 15rem;
+  left: -100%;
+  height: 425%;
   text-align: center;
   overflow: hidden;
   z-index: -1;

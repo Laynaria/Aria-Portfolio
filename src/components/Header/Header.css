@@ -1,0 +1,33 @@
+header {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 3rem;
+  /*gap: 15rem
+  si on ne s'en sert pas, on peut virer les sub flex 
+  et mettre le home direct dans le ul comme les autres li*/
+}
+
+nav ul,
+nav p {
+  margin-bottom: 1rem;
+  display: flex;
+  list-style: none;
+  font-size: 1.9rem;
+  gap: 5rem;
+}
+
+#navDecoration {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    270deg,
+    rgba(233, 68, 68, 0) 12.24%,
+    #e94444 49.95%,
+    rgba(233, 68, 68, 0) 90.93%
+  );
+}

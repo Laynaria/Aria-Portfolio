@@ -1,0 +1,45 @@
+.illuSection {
+  width: 80%;
+  text-align: left;
+}
+
+h2 {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.textBlock,
+.titleBlock,
+.imgBlock {
+  padding: 1rem;
+}
+
+.illuSection img {
+  outline: 1px solid #ffffff;
+  border-radius: 10px;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .illuSection {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 4rem;
+  }
+
+  .titleBlock,
+  .textBlock {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  #leftIllu {
+    grid-row: 2 / 4;
+  }
+
+  #rightIllu {
+    grid-row: 3 / 5;
+    grid-column: 2 / -1;
+  }
+}

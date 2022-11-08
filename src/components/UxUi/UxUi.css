@@ -1,0 +1,30 @@
+/*  */
+
+.uxUi {
+  margin-top: 12.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.uxUi img {
+  outline: 1px solid #ffffff;
+  border-radius: 10px;
+  width: 60%;
+}
+
+@media screen and (min-width: 1024px) {
+  .uxUi {
+    width: 50%;
+  }
+
+  .uxUi .textBlock,
+  .uxUi h2 {
+    text-align: center;
+  }
+
+  .uxUi img {
+    width: 50%;
+  }
+}

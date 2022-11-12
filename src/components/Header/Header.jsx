@@ -2,17 +2,56 @@ import { useState } from "react";
 import "./Header.css";
 
 const Header = () => {
+  // menu burger
   const [burgerState, setBurgerState] = useState(false);
-  const burgerWindow = document.querySelector("nav ul");
   const burgerHandler = () => {
     setBurgerState(!burgerState);
   };
 
-  window.addEventListener("click", () => {
-    burgerState
-      ? (burgerWindow.style.left = "0px")
-      : (burgerWindow.style.left = "-500px");
-  });
+  // anchor links, scrolls method
+
+  const scrollToTop = () => {
+    const body = document.querySelector("body");
+    body.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToAboutMe = () => {
+    const aboutMe = document.querySelector(".aboutMe");
+    aboutMe.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToIllustration = () => {
+    const illuSection = document.querySelector(".illuSection");
+    illuSection.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToProjects = () => {
+    const projectSection = document.querySelector(".projectSection");
+    projectSection.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToUxUi = () => {
+    const uxUiSection = document.querySelector(".uxUi");
+    uxUiSection.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  const scrollTo3D = () => {
+    const threeDSection = document.querySelector(".threeDSection");
+    threeDSection.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <header>
       <nav>
@@ -20,14 +59,16 @@ const Header = () => {
           <span id="burgerIcon" onClick={burgerHandler}>
             &#9776;
           </span>
-          <span>H</span>
+          <span id="logoMenu" onClick={scrollToTop}>
+            H
+          </span>
         </p>
-        <ul>
-          <li>About Me</li>
-          <li>Illustrations</li>
-          <li>Projects</li>
-          <li>UX/UI</li>
-          <li>3D</li>
+        <ul className={burgerState ? "burgerVisible" : ""}>
+          <li onClick={scrollToAboutMe}>About Me</li>
+          <li onClick={scrollToIllustration}>Illustrations</li>
+          <li onClick={scrollToProjects}>Projects</li>
+          <li onClick={scrollToUxUi}>UX/UI</li>
+          <li onClick={scrollTo3D}>3D</li>
           <li>Contact</li>
         </ul>
       </nav>

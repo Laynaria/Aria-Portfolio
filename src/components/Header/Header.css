@@ -5,6 +5,7 @@ header {
 nav ul {
   background-color: #191c22;
   border: 1px solid #e94444;
+  border-left: none;
   position: fixed;
   left: -500px;
   display: flex;
@@ -12,6 +13,16 @@ nav ul {
   gap: 5rem;
   transition: 0.2s ease-in-out;
   padding-right: 40px;
+}
+
+nav ul li,
+#logoMenu,
+#burgerIcon {
+  cursor: pointer;
+}
+
+.burgerVisible {
+  left: 0px;
 }
 
 nav p {
@@ -35,6 +46,8 @@ nav p {
 @media screen and (min-width: 1024px) {
   header {
     width: 100%;
+    position: fixed;
+    background-color: #191c22bd;
   }
 
   nav {
@@ -45,7 +58,7 @@ nav p {
   }
 
   nav ul {
-    background-color: none;
+    background-color: initial;
     border: none;
     flex-direction: row;
     position: static;

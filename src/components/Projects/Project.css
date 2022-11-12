@@ -1,6 +1,9 @@
 .projectSection {
   width: 80%;
   text-align: left;
+  display: grid;
+  grid-template-columns: 0fr 1fr 1fr 1fr 1fr 0fr;
+  gap: 1rem 0rem;
 }
 
 .projectSection h2 {
@@ -20,18 +23,27 @@
   width: 100%;
 }
 
+.projectSection .titleBlock,
+.projectSection .textBlock {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+#leftProject {
+  grid-row: 2 / 4;
+  grid-column: 1 / 5;
+}
+
+#rightProject {
+  grid-row: 4 / 6;
+  grid-column: 3 / 7;
+}
+
 @media screen and (min-width: 1024px) {
   .projectSection {
     width: 50%;
-    display: grid;
     grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
     gap: 1rem 4rem;
-  }
-
-  .projectSection .titleBlock,
-  .projectSection .textBlock {
-    grid-column: 1 / -1;
-    text-align: center;
   }
 
   #leftProject {

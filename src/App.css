@@ -37,16 +37,25 @@ section {
 
 .redThread {
   position: absolute;
-  top: 10rem;
-  left: -9.8%;
+  top: 3rem;
+  left: 0;
+  width: 100%;
   height: 335%;
   text-align: center;
   overflow: hidden;
-  z-index: -1;
+  z-index: -2;
+  display: flex;
+  justify-content: center;
 }
 
 .desktopSVG {
   display: none;
+}
+
+.mobileSVG {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
 }
 
 .backgroundSVG {
@@ -89,25 +98,5 @@ section {
 
   .mobileSVG {
     display: none;
-  }
-}
-
-/* */
-/* */
-/* */
-/* Logo React */
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 80s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }

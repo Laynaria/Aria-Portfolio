@@ -3,6 +3,8 @@ import { useEffect } from "react";
 const BackgroundSVG = () => {
   useEffect(() => {
     let path = document.querySelectorAll(".backgroundSVG path");
+    let redThreadClass = document.querySelector(".redThread");
+
     for (let i = 0; i < path.length; i++) {
       let pathLength = path[i].getTotalLength();
 
@@ -19,6 +21,10 @@ const BackgroundSVG = () => {
         let drawLength = pathLength * scrollPercentage;
         //Draw in  reverse
         path[i].style.strokeDashoffset = pathLength - drawLength;
+        redThreadClass.style.height = `${document.body.clientHeight}px`;
+      });
+      window.addEventListener("resize", () => {
+        redThreadClass.style.height = `${document.body.clientHeight}px`;
       });
     }
   });
